@@ -15,6 +15,7 @@ public class UserDetails {
 	@Column(name="USER_ID")
 	private Integer userId;
 	private String password;
+	@Column(unique = true)
 	private Long mobileNumber;
 	private String emailId;
 	private String name;

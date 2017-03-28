@@ -2,13 +2,16 @@ package com.hardware.rahul.test.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
+@XmlRootElement
 public class Products {
 
 	@Id
@@ -21,7 +24,7 @@ public class Products {
 	private int numberOfItems;
 	private String description;
 	private float price;
-	@ManyToOne
+	@ManyToOne(optional=false , fetch=FetchType.EAGER)
 	@JoinColumn(name="PRODUCT_TYPE_ID", foreignKey = @ForeignKey(name="FK_PRODUCT_TYPE"))
 	private ProductType productType;
 	

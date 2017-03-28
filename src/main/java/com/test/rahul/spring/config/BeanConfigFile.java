@@ -6,7 +6,6 @@ import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
@@ -25,14 +24,12 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import com.hardware.rahul.test.ProductCountBase;
-import com.test.rahul.spring.ComponentScanMarker;
 /**
  * This class has multiple DataSource define in it with @Profile annotation of Spring framework
  * @author Rahul
  *
  */
 @Configuration
-@ComponentScan(basePackageClasses= {ComponentScanMarker.class, ProductCountBase.class})
 @EnableJpaRepositories(basePackageClasses=ProductCountBase.class, repositoryImplementationPostfix="ExtendedImpl")	
 @PropertySource("classpath:application.properties")
 public class BeanConfigFile {
@@ -43,7 +40,6 @@ public class BeanConfigFile {
 	
 	
 	@Bean
-	@Profile("MySQLDataSource")
 	public DataSource createDataSource(){
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 		driverManagerDataSource.setDriverClassName(env.getProperty("MySQL.ClassName"));
@@ -77,7 +73,6 @@ public class BeanConfigFile {
 	}
 	
 	@Bean
-	@Profile("MySQLDataSource")
 	public JpaVendorAdapter createMYSQLJPAVendorAdapter(){
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 		adapter.setDatabase(Database.MYSQL);

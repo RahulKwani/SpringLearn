@@ -10,7 +10,6 @@ public interface ProductTypeDAO extends JpaRepository<ProductType, Integer> ,Pro
 	
 	ProductType findProductTypeNameByTypeId(Integer typeId);
 	
-	
 	List<ProductType> getProductTypeByType(String typeName);
-		
+	
 }

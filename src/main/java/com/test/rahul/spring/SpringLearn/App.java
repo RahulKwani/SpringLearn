@@ -1,14 +1,5 @@
 package com.test.rahul.spring.SpringLearn;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import com.hardware.rahul.test.model.ProductType;
-import com.hardware.rahul.test.model.Products;
-import com.test.rahul.spring.config.BeanConfigFile;
-import com.test.rahul.spring.facade.DataFacade;
-import com.test.rahul.spring.model.Users;
-import com.test.rahul.spring.service.SpringLearnService;
-
 /**
  * Hello world!
  *
@@ -16,7 +7,7 @@ import com.test.rahul.spring.service.SpringLearnService;
 public class App {
 	/**
 	 * @param args
-	 */
+	 *//*
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
 		ctx.getEnvironment().setActiveProfiles("MySQLDataSource");
@@ -30,13 +21,20 @@ public class App {
 			System.out.println(user);
 		}
 
-		for (Products product : dataFacade.getAllProducts()) {
+		for (Products product : service.retrieveAllProducts()) {
 			System.out.println(product);
 		}
 		
 		for (ProductType productType : dataFacade.getAllProductTypes()) {
 			System.out.println(productType);
 		}
+		
+		crateWebService(service);
+		
 		ctx.close();
 	}
+
+	private static void crateWebService(ProductServices service) {
+		Endpoint.publish("http://localhost:9999/ws/Productzz", service);
+	}*/
 }
