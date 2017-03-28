@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hardware.rahul.test.model.ProductType;
 import com.hardware.rahul.test.model.Products;
-import com.test.rahul.spring.service.ProductService;
+import com.hardware.rahul.test.service.ProductService;
 
 @RestController
 @RequestMapping("Products")

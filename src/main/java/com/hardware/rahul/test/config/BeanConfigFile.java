@@ -1,4 +1,4 @@
-package com.test.rahul.spring.config;
+package com.hardware.rahul.test.config;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;

@@ -1,4 +1,4 @@
-package com.test.rahul.spring.service;
+package com.hardware.rahul.test.service;
 
 import java.util.List;
 
