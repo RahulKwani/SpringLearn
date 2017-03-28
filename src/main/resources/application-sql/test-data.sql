@@ -1,0 +1,10 @@
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Sean Mathis','Nam.nulla.magna@magnisdis.com','WSK17LAQ1BB','O','2016-06-05');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Geoffrey Miles','aliquam.eu@blanditat.co.uk','IKH01KSZ8VD','F','2016-11-23');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Colorado Humphrey','in@pharetrafelis.ca','XIK21JAR6GO','M','2016-03-24');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Talon Emerson','amet.massa.Quisque@pulvinararcu.co.uk','CCT87GRB5ZV','O','2017-06-28');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Marvin Trevino','Proin@dictummagna.co.uk','ROW99JNY9IZ','F','2017-11-01');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Grady Shepard','egestas.Aliquam@eratVivamus.net','PYK76PMU9HB','O','2016-09-09');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Upton Francis','lacinia.mattis.Integer@egetmagnaSuspendisse.com','ZID91OWH3KJ','M','2018-01-08');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Marvin Mccullough','Nunc@dolor.ca','BFL54CDW5NY','M','2016-12-01');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Shad William','Proin.nisl.sem@urna.co.uk','EIY79FFW9BL','F','2016-12-17');
+INSERT INTO users ( name,email,password,gender,dateOfBirth) VALUES ('Bert Pugh','ornare.facilisis@sem.com','LBU51NEZ4OK','F','2016-06-14');
