@@ -40,6 +40,7 @@ public class BeanConfigFile {
 	
 	
 	@Bean
+	@Profile("MYSQL_DB")
 	public DataSource createDataSource(){
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 		driverManagerDataSource.setDriverClassName(env.getProperty("MySQL.ClassName"));
@@ -50,7 +51,7 @@ public class BeanConfigFile {
 	}
 	
 	@Bean
-	@Profile("EmbededDataDev")
+	//@Profile("EmbededDataDev")
 	public DataSource embededDataSource(){
 		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).addScript("classpath:application-sql/schema.sql")
 				.addScript("classpath:application-sql/test-data.sql").build();
@@ -62,7 +63,7 @@ public class BeanConfigFile {
 	}
 	
 	@Bean
-	@Profile("EmbededDataDev")
+	//@Profile("EmbededDataDev")
 	public JpaVendorAdapter createH2JPAVendorAdapter(){
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 		adapter.setDatabase(Database.H2);
@@ -73,6 +74,7 @@ public class BeanConfigFile {
 	}
 	
 	@Bean
+	@Profile("MYSQL_DB")
 	public JpaVendorAdapter createMYSQLJPAVendorAdapter(){
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 		adapter.setDatabase(Database.MYSQL);

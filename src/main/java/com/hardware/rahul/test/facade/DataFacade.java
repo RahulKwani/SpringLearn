@@ -9,10 +9,8 @@ import org.springframework.stereotype.Component;
 
 import com.hardware.rahul.test.dao.ProductTypeDAO;
 import com.hardware.rahul.test.dao.ProductsDAO;
-import com.hardware.rahul.test.dao.UserDetailsDAO;
 import com.hardware.rahul.test.model.ProductType;
 import com.hardware.rahul.test.model.Products;
-import com.hardware.rahul.test.model.UserDetails;
 import com.test.rahul.spring.dao.SpringLearnDao;
 import com.test.rahul.spring.model.Users;
 
@@ -59,8 +57,4 @@ public class DataFacade {
 		productsDAO.save(products);
 	}
 	
-	/*public boolean verifyMobNumAndPassword(Long MobNum, String password){
-		UserDetails userDetails  = userDAO.findUserDetailsByMobileNumberAndPassword(MobNum, password);
-		return userDAO.exists(userDetails);
-	}*/
 }

@@ -1,0 +1,34 @@
+@CHARSET "ISO-8859-1";
+html, body{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+body{
+	background: olive; 
+	font-size: 12pt;
+	font-weight: 400;
+	color: rgba(0,0,0,.8);
+	
+}
+
+h1,h2,h3{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #2D2D2D;
+}
+.box{
+  border: 5px dotted black;   /* defaults to medium */
+}
+td{
+	border : 1px solid black;
+	color : white;		
+}
+
+.printData{
+	align = center;
+}

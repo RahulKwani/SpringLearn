@@ -1,0 +1,751 @@
+@CHARSET "ISO-8859-1";
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+	color: #393939;
+	font-family: Arial;
+	font-size: 0px;
+}
+/*
+Will be used in all the subsequent pages for clearing out the extra space
+*/
+.clear {
+	clear: both;
+	font-size: 0px;
+	height: 0;
+	line-height: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* PAGING --------------------------------------------------------- */	
+
+#paging-table {
+	float: right;
+	margin: 0 4px 0 0;
+}	
+.page-far-left	{
+	background: url(../images/table/paging_far_left.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin: 0 4px 0 0;
+	width: 24px;
+	}
+.page-left	{
+	background: url(../images/table/paging_far_left.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	width: 24px;
+	}
+.page-far-right	{
+	background: url(../images/table/paging_far_right.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin: 0 4px 0 4px;
+	width: 24px;
+	}
+.page-right	{
+	background: url(../images/table/paging_far_right.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	width: 24px;
+	}
+#page-info	{
+	float: left;
+	line-height: 16px;
+	padding: 3px 12px 0 12px;
+	}
+	
+	
+/*  ACTIONS BOX ----------------------------------------------- */	
+#actions-box	{
+	float: left;
+	margin: 0 0 0 10px;
+	position: relative;
+	}
+a.action-slider	{
+	background: url(../images/table/dropdown_actions.gif) no-repeat;
+	display: block;
+	height: 30px;
+	width: 110px;
+	}
+a.action-slider.activated	{
+	background: url(../images/table/dropdown_actions.gif) no-repeat 0 -30px;
+	display: block;
+	height: 30px;
+	width: 110px;
+	}
+#actions-box-slider	{
+	background: url(../images/table/actions_slider_bg.gif) bottom no-repeat;
+	display: none;
+	left: 0;
+	padding-bottom: 1px;
+	padding-top: 10px;
+	position: absolute;
+	top: 24px;
+	width: 110px;
+	}
+#actions-box-slider-inner	{
+	font-size: 0px;
+	line-height: 0;
+	margin: 0 auto;
+	width: 108px;
+	}
+a.action-edit ,
+a.action-delete	{
+	color: #272727;
+	display: block;
+	font-weight: bold;
+	height: 20px;
+	margin: 0 auto;
+	padding: 10px 0 5px 45px;
+	width: 63px;
+	}
+a:hover.action-edit	{
+	background: #949494 url(../images/table/action_edit.gif) no-repeat 14px 5px;
+	color: #fff;
+	}
+a.action-edit	{
+	background: #c7c7c7 url(../images/table/action_edit.gif) no-repeat 14px 5px;
+	}
+a.action-delete	{
+	background: #c7c7c7 url(../images/table/action_delete.gif) no-repeat 14px 5px;
+	}
+a:hover.action-delete	{
+	background: #949494 url(../images/table/action_delete.gif) no-repeat 14px 5px;
+	color: #fff;
+	}
+
+
+
+/*------------------------------------------------------------------------------------
+Now below styling is for Products page and its table
+--------------------------------------------------------------------------------------*/
+#content-outer {
+	background: url(../images/shared/content_repeat.jpg) repeat-x;
+}
+
+#content {
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0 auto 0 auto;
+	max-width: 89%;
+	min-width: 60%;
+	padding: 35px 0px 30px 0px;
+	min-width: 60%;
+}
+
+#page-heading {
+	display: block;
+	margin: 0 0 15px 20px;
+}
+
+h1 {
+	color: #4b4b4b;
+	font-family: Tahoma;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: normal;
+}
+
+h2 {
+	color: #393939;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+h3 {
+	color: #92b22c;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+	margin-bottom: 10px;
+}
+/* #mainform{
+	width:100%;
+	height:100%;
+	text-align: center;
+} */
+#product-table {
+	margin-bottom: 20px;
+}
+
+#product-table	td a {
+	color: #393939;
+}
+
+#product-table	td a:hover {
+	text-decoration: underline;
+}
+
+#product-table	th {
+	height: 50px;
+	text-align: left;
+}
+
+#product-table	.minwidth-1 {
+	min-width: 110px;
+}
+
+#product-table td {
+	border: 1px solid #d2d2d2;
+	padding: 10px 0 10px 10px;
+}
+
+#product-table tr.alternate-row {
+	background: #ececec;
+}
+
+td.options-width {
+	padding: 0 0 0 10px;
+	width: 210px;
+}
+
+td.checkbox-width {
+	
+}
+
+.table-header-check {
+	background: url(../images/table/table_header_checkbox.jpg) no-repeat;
+	border: none;
+	min-width: 29px;
+	padding: 0px 0 0 10px;
+	width: 29px;
+}
+
+.table-header-options {
+	background: url(../images/table/table_header_options.jpg) no-repeat;
+	border: none;
+	min-width: 221px;
+	padding: 0px 0 0 0;
+	width: 221px;
+}
+
+.table-header-repeat {
+	background: url(../images/table/table_header_repeat.jpg) repeat-x;
+	border: none;
+	font-size: 0px;
+	line-height: 0;
+	padding: 0px 0 0 0;
+}
+
+.table-header-options a, .table-header-repeat a {
+	background: url(../images/table/table_sort_arrow.gif) right no-repeat;
+	color: #fff;
+	font-family: Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 14px;
+	margin: 0 0 0 10px;
+	padding: 0 10px 0 0;
+}
+
+.table-header-options a:hover, .table-header-repeat a:hover {
+	color: #94b52c
+}
+
+th.line-left {
+	border-left: 1px solid #373737;
+}
+
+#product-table	tr.activity-blue {
+	background: #e3eceb;
+}
+
+#toggle-all {
+	display: block;
+	width: 17px;
+	height: 17px;
+	cursor: pointer;
+	background: url(../images/shared/checkbox.gif) 0 -17px;
+}
+
+#toggle-all.toggle-checked {
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: url(../images/shared/checkbox.gif) 0 0;
+}
+
+a.icon-1 {
+	background: url(../images/table/table_icon_1.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin: 0 8px 0 0;
+	width: 24px;
+}
+
+a:hover.icon-1 {
+	background: url(../images/table/table_icon_1.gif) 0 -24px;
+}
+
+a.icon-2 {
+	background: url(../images/table/table_icon_2.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin: 0 8px 0 0;
+	width: 24px;
+}
+
+a:hover.icon-2 {
+	background: url(../images/table/table_icon_2.gif) 0 -24px;
+}
+
+a.icon-3 {
+	background: url(../images/table/table_icon_3.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin: 0 8px 0 0;
+	width: 24px;
+}
+
+a:hover.icon-3 {
+	background: url(../images/table/table_icon_3.gif) 0 -24px;
+}
+
+a.icon-4 {
+	background: url(../images/table/table_icon_4.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin: 0 8px 0 0;
+	width: 24px;
+}
+
+a:hover.icon-4 {
+	background: url(../images/table/table_icon_4.gif) 0 -24px;
+}
+
+a.icon-5 {
+	background: url(../images/table/table_icon_5.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	width: 24px;
+}
+
+a:hover.icon-5 {
+	background: url(../images/table/table_icon_5.gif) 0 -24px;
+}
+
+#tooltip {
+	background-color: #8c8c8c;
+	border: 1px solid #767676;
+	color: #fff;
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: normal;
+	opacity: 0.85;
+	padding: 0 5px;
+	position: absolute;
+	text-align: left;
+	z-index: 3000;
+}
+
+#tooltip h6, #tooltip div {
+	font-family: Arial;
+	font-size: 11px;
+	line-height: 20px;
+	margin: 0;
+}
+
+/*------------------------------------------------------------------------------------
+Now below styling is for Menu and Login page	
+--------------------------------------------------------------------------------------*/
+#page-top-outer {
+	background: url(../images/shared/top_bg.jpg) top center repeat;
+	border-bottom: 1px solid #7e7e7e;
+	height: 124px;
+}
+
+#page-top, .nav-outer {
+	margin: 0 auto;
+	max-width: 90%;
+	min-width: 60%;
+	position: relative;
+}
+
+#logo {
+	float: left;
+	margin: 8px 0 0 -10px;
+}
+
+#logo	a {
+	display: block;
+}
+
+#top-search {
+	display: inline;
+	float: right;
+	position: relative;
+	margin: 65px 20px 0 0;
+	z-index: 20;
+}
+
+.top-search-inp {
+	background: url(../images/shared/top_search_inp.gif) no-repeat;
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	height: 23px;
+	padding: 6px 6px 0 10px;
+	width: 164px;
+}
+
+.nav-outer-repeat {
+	background: url(../images/shared/nav/repeat.jpg) repeat-x;
+	height: 37px;
+}
+
+#nav-right {
+	float: right;
+	position: relative;
+	width: 225px;
+	z-index: 0;
+}
+
+#nav-right a {
+	display: block;
+	float: left;
+}
+
+.account-content {
+	background: #454545 url(../images/shared/nav/account_drop_bg.gif)
+		no-repeat bottom;
+	display: none;
+	left: 5px;
+	padding-bottom: 20px;
+	position: absolute;
+	top: 30px;
+	width: 170px;
+}
+
+.account-drop-inner {
+	font-size: 0px;
+	line-height: 0px;
+	margin: 20px auto 0 auto;
+	width: 140px;
+}
+
+.showhide-account {
+	cursor: pointer;
+	display: block;
+	float: left;
+	margin: 10px 5px 0 5px;
+}
+
+.account-drop-inner a {
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 16px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+.account-drop-inner a:hover {
+	color: #94b52c;
+}
+
+.acc-line {
+	background: url(../images/shared/nav/account_line.gif) no-repeat 0 7px;
+	font-size: 0px;
+	height: 14px;
+	line-height: 0px;
+	margin-top: 0px;
+	padding: 0;
+}
+
+a#logout {
+	margin: 10px 0 0 5px;
+}
+
+a#acc-settings {
+	background: url(../images/shared/nav/icon_acc_settings.gif) no-repeat 0
+		2px;
+	padding: 0 0 0 20px;
+}
+
+a#acc-details {
+	background: url(../images/shared/nav/icon_acc_personal.gif) no-repeat 0
+		2px;
+	padding: 0 0 0 20px;
+}
+
+a#acc-project {
+	background: url(../images/shared/nav/icon_acc_projects.gif) no-repeat 0
+		2px;
+	padding: 0 0 0 20px;
+}
+
+a#acc-inbox {
+	background: url(../images/shared/nav/icon_acc_inbox.gif) no-repeat 0 2px;
+	padding: 0 0 0 20px;
+}
+
+a#acc-stats {
+	background: url(../images/shared/nav/icon_acc_stats.gif) no-repeat 0 2px;
+	padding: 0 0 0 20px;
+}
+
+.nav {
+	float: left;
+	font-family: Tahoma;
+	font-size: 13px;
+	height: 38px;
+	position: relative;
+	width: 480px;
+	min-width: 480px;
+	z-index: 500;
+}
+
+.nav-divider {
+	background: url(../images/shared/nav/divider.jpg) top no-repeat;
+	float: left;
+	height: 40px;
+	width: 15px;
+}
+
+.nav .select, .nav .current {
+	display: table-cell;
+	float: left;
+	list-style: none;
+	margin: 0 0px 0 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+.nav li {
+	float: left;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul li a {
+	color: #fff;
+	display: block;
+	float: left;
+	height: 37px;
+	line-height: 35px;
+	padding: 0 20px 0 20px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.nav .current a {
+	background: url(../images/shared/nav/pro_line_1.gif);
+	line-height: 35px;
+	padding: 0 0 0 10px;
+}
+
+.nav .current a b {
+	background: url(../images/shared/nav/pro_line_1.gif) right top;
+	display: block;
+	padding: 0 20px 0 10px;
+}
+
+.nav .select a:hover, .nav .select li:hover a {
+	background: url(../images/shared/nav/pro_line_1.gif);
+	color: #fff;
+	cursor: pointer;
+	padding: 0 0 0 10px;
+}
+
+.nav .select a:hover b, .nav .select li:hover a b {
+	background: url(../images/shared/nav/pro_line_1.gif) right top;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 0 20px 0 10px;
+}
+
+/*-------------------------------------------------------
+This is for Login related page
+-------------------------------------------------------*/
+#login-bg {
+	background: url(../images/login/login_bg.jpg) no-repeat top center;
+}
+
+#login-holder {
+	margin: 0 auto 0 auto;
+	width: 508px;
+}
+
+#loginbox {
+	background: url(../images/login/loginbox_bg.png) no-repeat;
+	font-size: 12px;
+	height: 212px;
+	line-height: 12px;
+	padding-top: 60px;
+	position: relative;
+	width: 508px;
+}
+
+#forgotbox {
+	background: url(../images/login/loginbox_bg.png) no-repeat;
+	display: none;
+	font-size: 12px;
+	height: 212px;
+	line-height: 12px;
+	padding-top: 60px;
+	position: relative;
+	width: 508px;
+}
+
+#login-inner {
+	color: #161616;
+	font-family: Tahoma;
+	font-size: 13px;
+	line-height: 12px;
+	margin: 0 auto;
+	width: 310px;
+}
+
+#login-inner label {
+	color: #161616;
+	cursor: pointer;
+	font-family: Tahoma;
+	font-weight: bold;
+	line-height: 12px;
+	padding-left: 10px;
+}
+
+.checkbox-size {
+	width: 13px;
+	height: 13px;
+	margin: 5px 0;
+}
+
+#login-inner th {
+	padding: 0 0 6px 0;
+	text-align: left;
+	width: 95px;
+}
+
+#login-inner td {
+	padding: 0 0 6px 0;
+}
+
+.login-inp {
+	background: url(../images/login/inp_login.gif) no-repeat;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	height: 28px;
+	padding: 6px 6px 0 10px;
+	width: 204px;
+}
+
+#logo-login {
+	float: left;
+	height: 35px;
+	margin: 145px 0 0 15px;
+}
+
+#logo-login a img {
+	width: 190px;
+	height: 114px;
+	margin-top: -68px;
+}
+
+a.forgot-pwd {
+	bottom: 30px;
+	color: #161616;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 12px;
+	position: absolute;
+	right: 40px;
+}
+
+a:hover.forgot-pwd {
+	color: #fff;
+}
+
+#forgotbox-text {
+	color: #161616;
+	font-family: Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 12px;
+	margin: 0 auto 40px auto;
+	width: 380px;
+}
+
+#forgot-inner {
+	color: #161616;
+	font-family: Tahoma;
+	font-size: 13px;
+	line-height: 12px;
+	margin: 0 auto;
+	width: 330px;
+}
+
+#forgot-inner label {
+	color: #161616;
+	cursor: pointer;
+	font-family: Tahoma;
+	font-weight: bold;
+	line-height: 12px;
+	padding-left: 10px;
+}
+
+#forgot-inner th {
+	padding: 0 0 6px 0;
+	text-align: left;
+	width: 110px;
+}
+
+#forgot-inner td {
+	padding: 0 0 6px 0;
+}
+
+a.back-login {
+	background: url(../images/login/icon_back_login.gif) no-repeat 0 4px;
+	bottom: 30px;
+	color: #161616;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 12px;
+	padding: 0 0 0 10px;
+	position: absolute;
+	right: 40px;
+}
+
+a:hover.back-login {
+	color: #fff;
+}
+
+.submit-login {
+	background: url(../images/login/submit_login.gif) no-repeat;
+	border: none;
+	cursor: pointer;
+	display: block;
+	height: 29px;
+	text-indent: -3000px;
+	width: 73px;
+}
+
+.submit-login:hover {
+	background: url(../images/login/submit_login.gif) no-repeat 0 -29px;
+}
