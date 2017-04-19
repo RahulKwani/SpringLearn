@@ -25,7 +25,7 @@
 	});
 </script>
 </head>
-<body id="login-bg">
+<body id="login-bg" onload='document.f.username.focus();'>
 	<!-- Start: login-holder -->
 	<div id="login-holder">
 
@@ -43,7 +43,30 @@
 			<!--  start login-inner -->
 			<div id="login-inner">
 			<span><label>${LoginErrorMsg}</label></span>
-				<form:form modelAttribute="user" action="login" method="post">
+				<form name="f" action="login" method="post">
+				<input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}" />
+					<table>
+						<tr>
+							<th>Username</th>
+							<td><input type="text" name="username" class="login-inp" required minlength="3" data-msg-required="User name is required." /></td>
+						</tr>
+						<tr>
+							<th>Password</th>
+							<td><input type="password" value="************" onfocus="this.value=''"name="password" class="login-inp" required minlength="4" data-msg-required="Password is required."/></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td valign="top"><input type="checkbox"
+								class="checkbox-size" id="login-check" /><label
+								for="login-check">Remember me</label></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td><input type="submit" class="submit-login" /></td>
+						</tr>
+					</table>
+				</form>
+				<%-- <form:form modelAttribute="user" action="login" method="post">
 					<table>
 						<tr>
 							<th>Username</th>
@@ -65,7 +88,8 @@
 							<td><input type="submit" class="submit-login" /></td>
 						</tr>
 					</table>
-				</form:form>
+				</form:form> --%>
+				<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 			</div>
 			<!--  end login-inner -->
 			<div class="clear"></div>
@@ -80,19 +104,18 @@
 			<!--  start forgot-inner -->
 			<div id="forgot-inner">
 			<span><label>${ForgetMsg}</label></span>
-			<form:form modelAttribute="user" action="findUserDetails"  method="post">
-				 
+			<form name="forget"  action="findUserDetails"  method="post">
 				<table>
 					<tr>
 						<th>Mobile Number:</th>
-						<td><form:input  path="mobileNum" class="login-inp" /></td>
+						<td><input  name="mobileNumber" class="login-inp" /></td>
 					</tr>
 					<tr>
 						<th></th>
 						<td><input type="submit" class="submit-login" /></td>
 					</tr>
 				</table>
-			</form:form>
+			</form>
 			</div>
 			<!--  end forgot-inner -->
 			<div class="clear"></div>

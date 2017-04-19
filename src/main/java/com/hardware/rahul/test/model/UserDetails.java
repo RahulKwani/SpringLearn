@@ -14,6 +14,7 @@ public class UserDetails {
 	@GeneratedValue
 	@Column(name="USER_ID")
 	private Integer userId;
+	private String userName;
 	private String password;
 	@Column(unique = true)
 	private Long mobileNumber;
@@ -25,6 +26,14 @@ public class UserDetails {
 	private String Address;
 	@Enumerated(EnumType.STRING)
 	private Roles role;
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
 	public Integer getUserId() {
 		return userId;

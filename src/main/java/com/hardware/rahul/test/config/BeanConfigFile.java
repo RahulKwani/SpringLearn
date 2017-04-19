@@ -37,10 +37,8 @@ public class BeanConfigFile {
 	@Autowired
 	private Environment env;
 	
-	
-	
 	@Bean
-	@Profile("MYSQL_DB")
+	//@Profile("MYSQL_DB")
 	public DataSource createDataSource(){
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 		driverManagerDataSource.setDriverClassName(env.getProperty("MySQL.ClassName"));
@@ -49,21 +47,26 @@ public class BeanConfigFile {
 		driverManagerDataSource.setPassword(env.getProperty("MySQL.Password"));
 		return driverManagerDataSource;
 	}
+	@Bean
+	//@Profile("MYSQL_DB")
+	public JpaVendorAdapter createMYSQLJPAVendorAdapter(){
+		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
+		adapter.setDatabase(Database.MYSQL);
+		adapter.setShowSql(true);
+		adapter.setGenerateDdl(false);
+		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL57InnoDBDialect");
+		return adapter;
+	}
 	
 	@Bean
-	//@Profile("EmbededDataDev")
+	@Profile("EmbededDataDev")
 	public DataSource embededDataSource(){
 		return new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).addScript("classpath:application-sql/schema.sql")
 				.addScript("classpath:application-sql/test-data.sql").build();
 	}
 	
 	@Bean
-	public JdbcTemplate createJdbcTemplate(DataSource dataSource){
-		return new JdbcTemplate(dataSource);
-	}
-	
-	@Bean
-	//@Profile("EmbededDataDev")
+	@Profile("EmbededDataDev")
 	public JpaVendorAdapter createH2JPAVendorAdapter(){
 		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
 		adapter.setDatabase(Database.H2);
@@ -72,16 +75,9 @@ public class BeanConfigFile {
 		adapter.setDatabasePlatform("org.hibernate.dialect.H2Dialect");
 		return adapter;
 	}
-	
 	@Bean
-	@Profile("MYSQL_DB")
-	public JpaVendorAdapter createMYSQLJPAVendorAdapter(){
-		HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-		adapter.setDatabase(Database.MYSQL);
-		adapter.setShowSql(true);
-		adapter.setGenerateDdl(false);
-		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL57InnoDBDialect");
-		return adapter;
+	public JdbcTemplate createJdbcTemplate(DataSource dataSource){
+		return new JdbcTemplate(dataSource);
 	}
 	
 	@Bean

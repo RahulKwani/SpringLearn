@@ -48,21 +48,20 @@
 											<th class="table-header-repeat line-left minwidth-1"><a
 												href="">User Name</a></th>
 											<th class="table-header-repeat line-left minwidth-1"><a
-												href="">Password</a></th>
-											<th class="table-header-repeat line-left"><a href="">Mobile
-													Number</a></th>
-											<th class="table-header-repeat line-left"><a href="">Gender</a></th>
+												href="">brandName</a></th>
+											<th class="table-header-repeat line-left"><a href="">NumberOfItems</a></th>
+											<th class="table-header-repeat line-left"><a href="">price</a></th>
 											<th class="table-header-repeat line-left"><a href="">Role</a></th>
-											<th class="table-header-options line-left"><a href="">Options</a></th>
+											<th class="table-header-options line-left"><a href="">productType</a></th>
 										</tr>
-										<c:forEach items="${userList}" var="user">
+										<c:forEach items="${productList}" var="product">
 											<tr>
 												<td><input type="checkbox" /></td>
-												<td>${user.userName}</td>
-												<td>${user.password}</td>
-												<td><a href="">${user.mobileNum}</a></td>
-												<td>${user.gender}</td>
-												<td><a href="">${user.role}</a></td>
+												<td>${product.name}</td>
+												<td>${product.brandName}</td>
+												<td><a href="">${product.numberOfItems}</a></td>
+												<td>${product.price}</td>
+												<td><a href="">${product.productType.type}</a></td>
 												<td class="options-width"><a href="" title="Edit"
 													class="icon-1 info-tooltip"></a> <a href="" title="Edit"
 													class="icon-2 info-tooltip"></a> <a href="" title="Edit"

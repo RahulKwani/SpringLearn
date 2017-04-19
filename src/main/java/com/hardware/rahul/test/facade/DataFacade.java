@@ -42,10 +42,12 @@ public class DataFacade {
 		return productTypeDAO.findAll();
 	}
 	
-	public List<Products> retrieveProductsByProductType(Integer productType){
-		if(productType == ZERO)
+	public List<Products> retrieveProductsByProductType(Integer productTypeId){
+		if(productTypeId == ZERO)
 			return productsDAO.findAll();
-		return productsDAO.findProductsByProductTypes(productType);
+		ProductType productType = new ProductType();
+		productType.setTypeId(productTypeId);
+		return productsDAO.findProductsByProductType(productType);
 	}
 	
 	
